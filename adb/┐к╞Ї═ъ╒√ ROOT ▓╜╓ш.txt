@@ -1,0 +1,19 @@
+1.在“设置”—“关于手机”，连续点击“MIUI版本”，直到提示“开发者模式已经开启”。然后返回“设置”—“更多设置”—“开发者选项”，将USB调试模式和FASTBOO刷机模式都打开。
+
+2.下载我提供的附件：，先解压到一个文件夹中，然后将鼠标放到空白处，按住键盘的shift键不要放开，点击鼠标右键，如图，选择“在此处打开命令窗口”。
+
+3.在命令提示符窗口输入：adb root，然后按回车键；
+
+PS D:\adb> adb root
+* daemon not running. starting it now on port 5037 *
+* daemon started successfully *
+restarting adbd as root
+
+4.继续输入 adb disable-verity；
+
+PS D:\adb> adb disable-verity
+Verity disabled on /system
+Now reboot your device for settings to take effect
+PS D:\adb>
+
+5.然后或输入 adb reboot 命令或者手动重启手机均可；重启手机后你就可以利用自带root权限修改system分区了，还可以不需要借助第三方REC安装XP框架等等了。
